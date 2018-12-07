@@ -1,0 +1,33 @@
+// COLOR VARIABLES
+$color-primary: rgb(71, 139, 69);
+$color-primary-dark: rgb(39, 77, 38);
+$color-secondary: rgb(90, 119, 214);
+$color-secondary-dark: rgb(46, 60, 107);
+
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+
+html {
+    font-size: 62.5%; // 1rem = 10px
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.6;
+    font-weight: 400;
+    color: $color-primary-dark;
+}
+
+
+.container {
+    display: grid;
+    grid-template-rows: 8rem min-content 40vw min-content;
+    grid-template-columns: [full-start] min-content [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] 1fr [full-end];
+}

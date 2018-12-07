@@ -1,0 +1,51 @@
+.half {
+    &__one {
+        background-color: rgb(158, 92, 6);
+
+        grid-column: center-start / col-end 5;
+
+        display: grid;
+        grid-column: repeat(8, min-content);
+
+        &--one {
+            grid-column: 1 / 4;
+            background-color: azure;
+        }
+        &--two {
+            grid-column: 4 / 8;
+            background-color: rgb(43, 209, 209);
+        }
+
+    }
+    &__two {
+        background-color: rgb(58, 53, 45);
+
+        grid-column: col-start 6 / full-end;
+
+        display: grid;
+        grid-row: repeat(8, min-content);
+        grid-column: repeat(8, min-content);
+
+        &--one {
+            grid-column: 1 / 4;
+            grid-row: 1 / 4;
+            background-color: azure;
+        }
+        &--two {
+            grid-column: 4 / 8;
+            grid-row: 1 / 4;
+            background-color: rgb(43, 209, 209);
+        }
+        &--three {
+            grid-column: 1 / 6;
+            grid-row: 4 / 8;
+            background-color: rgb(3, 43, 43);
+        }
+        &--four {
+            grid-column: 5 / 8;
+            grid-row: 4 / 8;
+            background-color: rgb(184, 245, 245);
+        }
+
+    }
+}

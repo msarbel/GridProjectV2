@@ -1,0 +1,96 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box; }
+
+body {
+  line-height: 1.6;
+  font-weight: 400;
+  color: #274d26; }
+
+.container {
+  display: grid;
+  grid-template-rows: 8rem min-content 40vw min-content;
+  grid-template-columns: [full-start] min-content [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] 1fr [full-end]; }
+
+.half__one {
+  background-color: #9e5c06;
+  grid-column: center-start / col-end 5;
+  display: grid;
+  grid-column: repeat(8, min-content); }
+  .half__one--one {
+    grid-column: 1 / 4;
+    background-color: azure; }
+  .half__one--two {
+    grid-column: 4 / 8;
+    background-color: #2bd1d1; }
+
+.half__two {
+  background-color: #3a352d;
+  grid-column: col-start 6 / full-end;
+  display: grid;
+  grid-row: repeat(8, min-content);
+  grid-column: repeat(8, min-content); }
+  .half__two--one {
+    grid-column: 1 / 4;
+    grid-row: 1 / 4;
+    background-color: azure; }
+  .half__two--two {
+    grid-column: 4 / 8;
+    grid-row: 1 / 4;
+    background-color: #2bd1d1; }
+  .half__two--three {
+    grid-column: 1 / 6;
+    grid-row: 4 / 8;
+    background-color: #032b2b; }
+  .half__two--four {
+    grid-column: 5 / 8;
+    grid-row: 4 / 8;
+    background-color: #b8f5f5; }
+
+.header {
+  background-color: #e4cfb3;
+  grid-column: full-start / center-start;
+  grid-row: 2 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+
+.sidenav {
+  list-style: none; }
+  .sidenav-item {
+    padding: 2rem 4rem; }
+    .sidenav-item:hover {
+      background-color: black;
+      color: white; }
+
+.main-section {
+  background-color: #22180a;
+  grid-column: center-start / full-end; }
+
+.navigation {
+  background-color: #b17f3f;
+  grid-column: full-start / full-end;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .navigation__first {
+    background-color: beige; }
+  .navigation__second {
+    background-color: beige; }
+  .navigation__third {
+    background-color: beige; }
+
+.secondary {
+  background-color: #8b7960;
+  grid-column: center-start / center-end; }
+
+.footer {
+  background-color: antiquewhite;
+  grid-column: full-start / full-end; }
